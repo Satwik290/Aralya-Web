@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Core Brand Colours ── */
+  --color-primary:      #1E3A2F;
+  --color-gold:         #C69C6D;
+  --color-gold-mid:     #B8874A;
+  --color-gold-light:   #E8D5B0;
+  --color-gold-pale:    #F5ECD8;
+  --color-cream:        #FDFBF6;
+  --color-tan:          #F2EBD9;
+  --color-tan-dark:     #E8DCCA;
+  --color-dark:         #2C2C2C;
+  --color-muted:        #6B6B6B;
+  --color-whatsapp:     #25D366;
+  --color-whatsapp-dk:  #128C7E;
+
+  /* ── Typography ── */
+  --font-sans:   'Inter',   ui-sans-serif, system-ui, sans-serif;
+  --font-serif:  'Playfair Display', Georgia, ui-serif, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Gold gradient button ── */
+.btn-gold {
+  background: linear-gradient(145deg, #D4A76A 0%, #B5813A 60%, #A07030 100%);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: filter 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px rgba(180,120,40,0.28);
+}
+.btn-gold:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* ── Dark CTA button ── */
+.btn-dark {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-dark:hover {
+  background: #163020;
+  transform: translateY(-1px);
+}
+
+/* ── Phone mockup drop shadow ── */
+.phone-shadow {
+  filter: drop-shadow(0 24px 40px rgba(0,0,0,0.18));
+}
+
+/* Serif utility */
+.font-serif { font-family: var(--font-serif); }
+.font-sans  { font-family: var(--font-sans);  }
