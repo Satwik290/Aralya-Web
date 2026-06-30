@@ -182,10 +182,10 @@ export default function WhatsAppShowcase() {
           <p className="text-[13.5px] text-muted mt-2 tracking-wide">Desktop-friendly represened a desktop flow</p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start justify-center gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <PhoneFrame><Screen1 /></PhoneFrame>
-          <PhoneFrame className="md:mt-10"><Screen2 /></PhoneFrame>
-          <PhoneFrame className="md:mt-20"><Screen3 /></PhoneFrame>
+          <PhoneFrame className="md:-mt-2"><Screen2 /></PhoneFrame>
+          <PhoneFrame><Screen3 /></PhoneFrame>
         </div>
       </div>
     </section>

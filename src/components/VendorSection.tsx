@@ -1,8 +1,8 @@
 const features = [
-  { icon: "👨‍🌾", title: "Familiar Face", desc: "People you already trust" },
-  { icon: "⏰", title: "Reliable Delivery", desc: "Every morning before 7 AM" },
-  { icon: "🏘️", title: "Hyperlocal", desc: "Accountability" },
-  { icon: "🤝", title: "Community First", desc: "Strengthening local ties" },
+  { icon: <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>, title: "Familiar Face", desc: "People you already trust" },
+  { icon: <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, title: "Reliable Delivery", desc: "Every morning before 7 AM" },
+  { icon: <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>, title: "Hyperlocal", desc: "Accountability" },
+  { icon: <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>, title: "Community First", desc: "Strengthening local ties" },
 ];
 
 export default function VendorSection() {
@@ -42,7 +42,7 @@ export default function VendorSection() {
             <div className="rounded-[32px] overflow-hidden shadow-xl border-4 border-white aspect-[4/5] relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1542856204-00101eb6def4?auto=format&fit=crop&w=800&q=90"
+                src="/vendor_1782817026999.png"
                 alt="Trusted newspaper vendor at dawn"
                 className="w-full h-full object-cover"
               />

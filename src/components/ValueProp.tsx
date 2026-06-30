@@ -17,7 +17,7 @@ export default function ValueProp() {
       <div className="absolute inset-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1611516491426-03025e6043c8?auto=format&fit=crop&w=1600&q=90"
+          src="/family_puja_1782817017087.png"
           alt="Family morning puja ritual"
           className="w-full h-full object-cover"
         />

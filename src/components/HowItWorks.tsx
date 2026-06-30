@@ -17,7 +17,7 @@ const steps = [
     icon: (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src="https://images.unsplash.com/photo-1605369686008-011400d5a230?auto=format&fit=crop&w=200&q=85"
+        src="/step_2_1782817061255.png"
         alt="Choose daily plan"
         className="w-full h-full object-cover rounded-2xl"
       />
@@ -31,7 +31,7 @@ const steps = [
     icon: (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src="https://images.unsplash.com/photo-1596766465427-46327b738980?auto=format&fit=crop&w=200&q=85"
+        src="/step_3_1782817076704.png"
         alt="Fresh flowers at doorstep"
         className="w-full h-full object-cover rounded-2xl"
       />

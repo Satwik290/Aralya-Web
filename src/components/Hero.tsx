@@ -41,8 +41,8 @@ const features = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      {/* Warm gradient overlay on right side */}
-      <div className="absolute inset-y-0 right-0 w-[52%] bg-gradient-to-l from-[#F0E5D0] via-[#F5EFE3] to-transparent pointer-events-none" />
+      {/* Rich warm background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cream via-[#F5EFE3] to-[#E8D5B0] pointer-events-none opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-0 min-h-[480px] items-center">
@@ -91,12 +91,15 @@ export default function Hero() {
           {/* ── Right: Hero Image ── */}
           <div className="relative hidden lg:flex items-center justify-center py-8">
             {/* Decorative leaf petals floating */}
-            <div className="absolute top-8 left-0 text-3xl opacity-70 rotate-[-20deg]">🍂</div>
-            <div className="absolute bottom-12 right-0 text-2xl opacity-60 rotate-[30deg]">🍃</div>
-            <div className="absolute top-1/3 right-0 text-xl opacity-50 rotate-[10deg]">✨</div>
+            <svg className="absolute top-8 left-0 w-8 h-8 text-gold opacity-70 rotate-[-20deg]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
+            <svg className="absolute bottom-12 right-0 w-6 h-6 text-gold opacity-60 rotate-[30deg]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 3C17.5 3 10 3.5 6 8.5C3.33333 11.8333 3.33333 16.5 3.33333 16.5C3.33333 16.5 7.5 17 11.5 13.5C16.5 9.125 17.5 3 17.5 3ZM15.5 5.5C15.5 5.5 14.5 9.5 10.5 12.5C7.3 14.9 5.5 15.25 5.5 15.25C5.5 15.25 6 12.5 8 10C11.5 5.625 15.5 5.5 15.5 5.5Z"/></svg>
+            <svg className="absolute top-1/3 right-0 w-5 h-5 text-gold-mid opacity-70 rotate-[10deg]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
 
-            {/* Main image — circular/oval crop */}
-            <div className="relative w-[430px] h-[430px] rounded-full overflow-hidden shadow-2xl border-8 border-white/60">
+            {/* Main image — organic blob crop */}
+            <div 
+              className="relative w-[430px] h-[430px] overflow-hidden shadow-2xl border-8 border-white/60"
+              style={{ borderRadius: "45% 55% 40% 60% / 55% 45% 60% 40%" }}
+            >
               {/* Using a high-quality Unsplash puja flowers image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
