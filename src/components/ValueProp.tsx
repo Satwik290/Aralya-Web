@@ -41,43 +41,51 @@ export default function ValueProp() {
             </p>
           </div>
 
-          {/* Right: Pricing Card */}
+          {/* Right: Pricing Card — Glassmorphism */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-cream/95 backdrop-blur-md rounded-[28px] p-8 shadow-2xl w-full max-w-[360px] border border-gold/40 relative overflow-hidden">
-              {/* Decorative top edge highlight */}
-              <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
-              
-              <h3 className="font-serif text-[1.4rem] font-semibold text-primary text-center mb-6 pb-4 border-b border-gold-light/40">
-                Daily Puja Plan
-              </h3>
+            <div className="relative w-full max-w-[360px] rounded-[28px] overflow-hidden">
+              {/* Glass background */}
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[28px]" />
+              {/* Top gold shine */}
+              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+              {/* Subtle inner glow */}
+              <div className="absolute inset-0 bg-gradient-to-b from-white/8 to-transparent rounded-[28px]" />
 
-              <ul className="space-y-3 mb-7">
-                {[
-                  "Daily fresh seasonal flowers",
-                  "Delivered before 7 AM",
-                  "Pause / Resume anytime",
-                  "Dedicated WhatsApp support",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
-                    <CheckIcon />
-                    <span className="text-[14px] text-dark/90 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="relative p-8">
+                <h3 className="font-serif text-[1.4rem] font-semibold text-cream text-center mb-2 pb-4 border-b border-white/20">
+                  Daily Puja Plan
+                </h3>
 
-              {/* Price block */}
-              <div className="text-center py-4 mb-6 bg-tan/60 rounded-2xl border border-gold-light/30">
-                <div className="font-serif text-[2rem] font-bold text-primary leading-none">
-                  ₹449{" "}
-                  <span className="text-[1rem] font-semibold text-muted">/ month</span>
+                <ul className="space-y-3.5 mb-7 mt-5">
+                  {[
+                    "Daily fresh seasonal flowers",
+                    "Delivered before 7 AM",
+                    "Pause / Resume anytime",
+                    "Dedicated WhatsApp support",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-[14px] text-cream/90 font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Price block */}
+                <div className="text-center py-4 mb-6 bg-white/10 rounded-2xl border border-white/15">
+                  <div className="font-serif text-[2.2rem] font-bold text-cream leading-none">
+                    ₹449{" "}
+                    <span className="text-[1rem] font-semibold text-cream/70">/ month</span>
+                  </div>
+                  <div className="text-[12px] text-gold/80 mt-1.5 font-medium">≈ ₹15 per day · Cancel anytime</div>
                 </div>
-                <div className="text-[12px] text-muted mt-1">≈ ₹15 per day</div>
-              </div>
 
-              <button className="btn-dark w-full justify-center gap-2.5 text-[14px]">
-                <WaIcon className="w-5 h-5 text-whatsapp" />
-                Start On WhatsApp
-              </button>
+                <button className="btn-gold w-full justify-center gap-2.5 text-[14px]">
+                  <WaIcon className="w-5 h-5" />
+                  Start On WhatsApp
+                </button>
+              </div>
             </div>
           </div>
 

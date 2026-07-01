@@ -11,14 +11,25 @@ export default function Footer() {
   return (
     <footer>
       {/* ── Pre-footer CTA Banner ── */}
-      <div className="bg-tan-dark py-10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <h2 className="font-serif text-[1.6rem] lg:text-[1.8rem] font-semibold text-primary leading-snug text-center md:text-left">
-            Begin Your Day With Devotion.<br className="hidden md:block" />
-            We&apos;ll Take Care Of The Rest.
-          </h2>
-          <button className="btn-dark shrink-0 text-[14px] gap-2.5">
-            <WaIcon className="w-5 h-5 text-whatsapp" />
+      <div className="relative overflow-hidden bg-gradient-to-br from-[#1E3A2F] via-[#243d32] to-[#1a3328] py-20 px-6">
+        {/* Subtle warm overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent pointer-events-none" />
+        {/* Decorative orbs */}
+        <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-gold/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-gold/8 blur-3xl pointer-events-none" />
+        {/* Thin gold top border */}
+        <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+
+        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="text-center md:text-left">
+            <h2 className="font-serif text-[2rem] lg:text-[2.4rem] font-semibold text-cream leading-[1.15] tracking-[-0.01em] mb-3">
+              Begin Your Day With Devotion.<br className="hidden md:block" />
+              We&apos;ll Take Care Of The Rest.
+            </h2>
+            <p className="text-cream/60 text-[15px] max-w-md">Fresh flowers. Every morning. Starting at just ₹449/month.</p>
+          </div>
+          <button className="btn-gold shrink-0 text-[14px] gap-2.5 py-3.5 px-7 shadow-[0_8px_32px_rgba(160,112,48,0.5)]">
+            <WaIcon className="w-5 h-5" />
             Start Your Daily Puja Plan
           </button>
         </div>

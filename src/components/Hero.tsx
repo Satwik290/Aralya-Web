@@ -49,7 +49,7 @@ export default function Hero() {
 
           {/* ── Left: Copy ── */}
           <div className="py-16 lg:py-20 pr-6 lg:pr-12 z-10">
-            <h1 className="font-serif text-[3.25rem] lg:text-[3.6rem] leading-[1.08] font-bold text-primary mb-5">
+            <h1 className="font-serif text-[3.25rem] lg:text-[3.75rem] leading-[1.04] font-bold text-primary mb-5 tracking-[-0.02em]">
               Preserve Your<br />Family&apos;s Morning<br />Rituals
             </h1>
 
@@ -70,19 +70,19 @@ export default function Hero() {
             {/* Feature chips */}
             <div className="flex flex-wrap gap-5 mb-10">
               {features.map((f) => (
-                <div key={f.label} className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full border border-gold-light bg-gold-pale flex items-center justify-center text-gold shrink-0">
+                <div key={f.label} className="flex items-center gap-3 group">
+                  <div className="w-10 h-10 rounded-full border border-gold/40 bg-gradient-to-br from-gold-pale to-tan flex items-center justify-center text-gold-mid shrink-0 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-0.5">
                     {f.icon}
                   </div>
-                  <div className="text-[12px] text-dark/70 font-medium leading-tight">
-                    {f.label}<br />{f.sub}
+                  <div className="text-[13px] text-dark/80 font-semibold leading-tight">
+                    {f.label}<br /><span className="text-[12px] font-medium text-muted">{f.sub}</span>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* CTA */}
-            <button className="btn-gold text-[14px] shadow-lg">
+            <button className="btn-gold text-[14px] shadow-[0_8px_32px_rgba(160,112,48,0.45)] hover:shadow-[0_12px_40px_rgba(160,112,48,0.55)]">
               <WaIcon />
               Start Your Daily Puja Plan
             </button>
@@ -90,13 +90,13 @@ export default function Hero() {
 
           {/* ── Right: Hero Image ── */}
           <div className="relative hidden lg:flex items-center justify-center py-8">
-            {/* Decorative leaf/petal scatter */}
-            <svg className="absolute top-2 left-2 w-9 h-9 text-gold opacity-80 rotate-[-25deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
-            <svg className="absolute top-20 -left-2 w-5 h-5 text-gold-mid opacity-60 rotate-[60deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
-            <svg className="absolute bottom-6 -right-2 w-10 h-10 text-gold opacity-70 rotate-[30deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 3C17.5 3 10 3.5 6 8.5C3.33333 11.8333 3.33333 16.5 3.33333 16.5C3.33333 16.5 7.5 17 11.5 13.5C16.5 9.125 17.5 3 17.5 3ZM15.5 5.5C15.5 5.5 14.5 9.5 10.5 12.5C7.3 14.9 5.5 15.25 5.5 15.25C5.5 15.25 6 12.5 8 10C11.5 5.625 15.5 5.5 15.5 5.5Z"/></svg>
-            <svg className="absolute top-1/3 -right-4 w-6 h-6 text-gold-mid opacity-70 rotate-[10deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
-            <svg className="absolute bottom-24 right-10 w-4 h-4 text-gold opacity-50 rotate-[-15deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
-            <svg className="absolute top-4 right-16 w-3 h-3 text-gold-mid opacity-60 z-10" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/></svg>
+            {/* Decorative leaf/petal scatter — with floating animations */}
+            <svg className="absolute top-2 left-2 w-9 h-9 text-gold opacity-80 rotate-[-25deg] z-10 animate-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
+            <svg className="absolute top-20 -left-2 w-5 h-5 text-gold-mid opacity-60 rotate-[60deg] z-10 animate-float-slow" style={{animationDelay:'1.2s'}} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
+            <svg className="absolute bottom-6 -right-2 w-10 h-10 text-gold opacity-70 rotate-[30deg] z-10 animate-float" style={{animationDelay:'0.8s'}} fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 3C17.5 3 10 3.5 6 8.5C3.33333 11.8333 3.33333 16.5 3.33333 16.5C3.33333 16.5 7.5 17 11.5 13.5C16.5 9.125 17.5 3 17.5 3ZM15.5 5.5C15.5 5.5 14.5 9.5 10.5 12.5C7.3 14.9 5.5 15.25 5.5 15.25C5.5 15.25 6 12.5 8 10C11.5 5.625 15.5 5.5 15.5 5.5Z"/></svg>
+            <svg className="absolute top-1/3 -right-4 w-6 h-6 text-gold-mid opacity-70 rotate-[10deg] z-10 animate-float-fast" style={{animationDelay:'2s'}} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
+            <svg className="absolute bottom-24 right-10 w-4 h-4 text-gold opacity-50 rotate-[-15deg] z-10 animate-float-slow" style={{animationDelay:'0.5s'}} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
+            <svg className="absolute top-4 right-16 w-3 h-3 text-gold-mid opacity-60 z-10 animate-float" style={{animationDelay:'1.5s'}} fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/></svg>
 
             {/* Main image — leaf/petal shape crop */}
             <div

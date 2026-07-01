@@ -172,6 +172,8 @@ export default function WhatsAppShowcase() {
       {/* Subtle radial glow behind section */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-20 right-1/4 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[100px]" />
+        {/* Left-column warm glow to balance dark chat window */}
+        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-gold-pale/40 blur-[80px]" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[80px]" />
       </div>
 
@@ -179,13 +181,16 @@ export default function WhatsAppShowcase() {
         <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
 
           {/* ─── Left Column ─── */}
-          <div>
+          <div className="relative">
+            {/* Soft left column halo */}
+            <div className="absolute -inset-8 rounded-[40px] bg-gradient-to-r from-gold-pale/60 to-transparent blur-2xl pointer-events-none" />
+            <div className="relative">
             {/* Eyebrow label */}
             <div className="flex items-center gap-2 mb-5">
               <span className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gold-mid border border-gold-light/60 bg-gold-pale/60 rounded-full px-3 py-1">
                 WhatsApp Bot
               </span>
-              <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse-glow" />
               <span className="text-[11px] text-muted">Live</span>
             </div>
 
@@ -224,24 +229,26 @@ export default function WhatsAppShowcase() {
               ))}
             </div>
 
-            {/* WhatsApp CTA */}
+            {/* WhatsApp CTA — brand-aligned */}
             <motion.a
               href="https://wa.me/917900012345"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="mt-8 inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-green-900/20 transition-colors text-[14px] cursor-pointer"
+              className="mt-8 inline-flex items-center gap-2.5 bg-primary hover:bg-[#163020] text-white font-semibold px-6 py-3.5 rounded-full shadow-lg shadow-primary/30 transition-all text-[14px] cursor-pointer border border-white/10"
             >
               <WaLogo />
               Chat with Aralya on WhatsApp
             </motion.a>
+            </div>
           </div>
 
           {/* ─── Right Column: Chat Window ─── */}
           <div className="relative">
-            {/* Outer glow */}
-            <div className="absolute -inset-3 rounded-[36px] bg-primary/15 blur-xl pointer-events-none" />
+            {/* Multi-layer outer glow */}
+            <div className="absolute -inset-4 rounded-[40px] bg-primary/20 blur-2xl pointer-events-none" />
+            <div className="absolute -inset-1 rounded-[34px] bg-primary/10 blur-md pointer-events-none" />
 
             {/* Chat card */}
             <div className="relative bg-[#1E3A2F] rounded-[32px] overflow-hidden shadow-2xl flex flex-col" style={{ height: 540 }}>
@@ -269,9 +276,15 @@ export default function WhatsAppShowcase() {
               {/* Messages area */}
               <div
                 ref={scrollRef}
-                className="flex-1 overflow-y-auto px-4 py-4 space-y-3 scrollbar-thin"
-                style={{ scrollbarWidth: "none" }}
+                className="relative flex-1 overflow-y-auto px-4 py-4 space-y-3 scrollbar-thin"
+                style={{ 
+                  scrollbarWidth: "none",
+                  backgroundColor: "#0d1f18",
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-25.26 25.26-.83-.83L54.627 0zm-53.25 53.25l.83.83-25.26 25.26-.83-.83L1.377 53.25zm53.25 0l.83-.83-25.26-25.26-.83.83 25.26 25.26zm-53.25-53.25l.83-.83 25.26 25.26-.83.83L1.377 0z' fill='%231a3328' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")`
+                }}
               >
+                <div className="absolute inset-0 bg-[#0d1f18]/60 pointer-events-none" />
+                <div className="relative z-10">
                 <AnimatePresence initial={false}>
                   {messages.map((msg) => (
                     <motion.div
@@ -323,6 +336,7 @@ export default function WhatsAppShowcase() {
                     </motion.div>
                   )}
                 </AnimatePresence>
+                </div>
               </div>
 
               {/* Input bar */}

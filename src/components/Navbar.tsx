@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const WaIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -8,16 +11,36 @@ const WaIcon = () => (
 );
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full bg-cream border-b border-gold-light/30 sticky top-0 z-50">
+    <header
+      className={`w-full sticky top-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-cream/80 backdrop-blur-xl border-b border-gold-light/40 shadow-[0_2px_20px_rgba(0,0,0,0.06)]"
+          : "bg-cream/95 border-b border-gold-light/20"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-[72px]">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <Image src="/logo-icon.png" alt="Aralya" width={56} height={42} className="h-11 w-auto" />
+        <Link href="/" className="flex items-center gap-3 shrink-0 group">
+          <Image
+            src="/logo-icon.png"
+            alt="Aralya"
+            width={56}
+            height={42}
+            className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+          />
           <div className="leading-none">
-            <div className="font-serif text-[1.3rem] font-bold text-primary tracking-wide">ARALYA</div>
-            <div className="text-[8px] font-semibold text-gold-mid tracking-[0.18em] mt-0.5">FRESH FLOWER DELIVERY</div>
+            <div className="font-serif text-[1.35rem] font-bold text-primary tracking-wide">ARALYA</div>
+            <div className="text-[8px] font-semibold text-gold-mid tracking-[0.18em] mt-0.5 opacity-80">FRESH FLOWER DELIVERY</div>
           </div>
         </Link>
 
@@ -27,15 +50,16 @@ export default function Navbar() {
             <Link
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="text-[13.5px] font-medium text-dark/80 hover:text-primary transition-colors"
+              className="relative text-[13.5px] font-medium text-dark/70 hover:text-primary transition-colors duration-200 group pb-0.5"
             >
               {item}
+              <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold rounded-full transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </nav>
 
-        {/* Subscribe CTA */}
-        <button className="hidden md:flex items-center gap-2 bg-primary hover:bg-primary/90 text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full transition-all">
+        {/* Subscribe CTA — now uses shimmer gold */}
+        <button className="hidden md:flex btn-gold text-[13px] py-2.5 px-5">
           <WaIcon />
           Subscribe
         </button>
