@@ -31,7 +31,11 @@ export default function Footer() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">
-              <Image src="/logo.png" alt="Aralya Logo" width={180} height={60} className="h-14 w-auto" />
+              <Image src="/logo-icon.png" alt="Aralya" width={56} height={42} className="h-11 w-auto" />
+              <div className="leading-none">
+                <div className="font-serif text-[1.2rem] font-bold text-primary tracking-wide">ARALYA</div>
+                <div className="text-[7px] font-semibold text-gold-mid tracking-[0.18em] mt-0.5">FRESH FLOWER DELIVERY</div>
+              </div>
             </Link>
 
             {/* Links */}

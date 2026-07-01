@@ -38,8 +38,11 @@ export default function VendorSection() {
           </div>
 
           {/* Right: Vendor photo */}
-          <div className="lg:col-span-6 xl:col-span-5">
-            <div className="rounded-[32px] overflow-hidden shadow-xl border-4 border-white aspect-[4/5] relative">
+          <div className="lg:col-span-6 xl:col-span-5 flex justify-end">
+            <div 
+              className="overflow-hidden shadow-xl border-4 border-white aspect-[4/5] relative w-full max-w-[420px]"
+              style={{ borderRadius: "100px 20px 100px 20px" }}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/vendor_1782817026999.png"

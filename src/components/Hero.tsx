@@ -90,17 +90,19 @@ export default function Hero() {
 
           {/* ── Right: Hero Image ── */}
           <div className="relative hidden lg:flex items-center justify-center py-8">
-            {/* Decorative leaf petals floating */}
-            <svg className="absolute top-8 left-0 w-8 h-8 text-gold opacity-70 rotate-[-20deg]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
-            <svg className="absolute bottom-12 right-0 w-6 h-6 text-gold opacity-60 rotate-[30deg]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 3C17.5 3 10 3.5 6 8.5C3.33333 11.8333 3.33333 16.5 3.33333 16.5C3.33333 16.5 7.5 17 11.5 13.5C16.5 9.125 17.5 3 17.5 3ZM15.5 5.5C15.5 5.5 14.5 9.5 10.5 12.5C7.3 14.9 5.5 15.25 5.5 15.25C5.5 15.25 6 12.5 8 10C11.5 5.625 15.5 5.5 15.5 5.5Z"/></svg>
-            <svg className="absolute top-1/3 right-0 w-5 h-5 text-gold-mid opacity-70 rotate-[10deg]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
+            {/* Decorative leaf/petal scatter */}
+            <svg className="absolute top-2 left-2 w-9 h-9 text-gold opacity-80 rotate-[-25deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
+            <svg className="absolute top-20 -left-2 w-5 h-5 text-gold-mid opacity-60 rotate-[60deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C12 2 4 6 4 13C4 16.866 7.58172 20 12 20C16.4183 20 20 16.866 20 13C20 6 12 2 12 2ZM12 18C8.68629 18 6 15.7614 6 13C6 8.5 12 4.5 12 4.5C12 4.5 18 8.5 18 13C18 15.7614 15.3137 18 12 18Z"/></svg>
+            <svg className="absolute bottom-6 -right-2 w-10 h-10 text-gold opacity-70 rotate-[30deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 3C17.5 3 10 3.5 6 8.5C3.33333 11.8333 3.33333 16.5 3.33333 16.5C3.33333 16.5 7.5 17 11.5 13.5C16.5 9.125 17.5 3 17.5 3ZM15.5 5.5C15.5 5.5 14.5 9.5 10.5 12.5C7.3 14.9 5.5 15.25 5.5 15.25C5.5 15.25 6 12.5 8 10C11.5 5.625 15.5 5.5 15.5 5.5Z"/></svg>
+            <svg className="absolute top-1/3 -right-4 w-6 h-6 text-gold-mid opacity-70 rotate-[10deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
+            <svg className="absolute bottom-24 right-10 w-4 h-4 text-gold opacity-50 rotate-[-15deg] z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
+            <svg className="absolute top-4 right-16 w-3 h-3 text-gold-mid opacity-60 z-10" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/></svg>
 
-            {/* Main image — organic blob crop */}
-            <div 
-              className="relative w-[430px] h-[430px] overflow-hidden shadow-2xl border-8 border-white/60"
-              style={{ borderRadius: "45% 55% 40% 60% / 55% 45% 60% 40%" }}
+            {/* Main image — leaf/petal shape crop */}
+            <div
+              className="relative w-[480px] h-[400px] overflow-hidden shadow-2xl border-8 border-white"
+              style={{ borderRadius: "50% 20px 50% 20px" }}
             >
-              {/* Using a high-quality Unsplash puja flowers image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/puja-hero.png"

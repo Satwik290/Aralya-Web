@@ -21,7 +21,8 @@ export default function ValueProp() {
           alt="Family morning puja ritual"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2C1A10]/80 via-[#2C1A10]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A2F]/90 via-[#2C1A10]/75 to-transparent mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24">
@@ -42,7 +43,10 @@ export default function ValueProp() {
 
           {/* Right: Pricing Card */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-cream rounded-[28px] p-8 shadow-2xl w-full max-w-[360px] border border-gold-light/30">
+            <div className="bg-cream/95 backdrop-blur-md rounded-[28px] p-8 shadow-2xl w-full max-w-[360px] border border-gold/40 relative overflow-hidden">
+              {/* Decorative top edge highlight */}
+              <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
+              
               <h3 className="font-serif text-[1.4rem] font-semibold text-primary text-center mb-6 pb-4 border-b border-gold-light/40">
                 Daily Puja Plan
               </h3>
