@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhatsAppShowcase from "@/components/WhatsAppShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import ValueProp from "@/components/ValueProp";
+import Pricing from "@/components/Pricing";
 import VendorSection from "@/components/VendorSection";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <WhatsAppShowcase />
         <HowItWorks />
         <ValueProp />
+        <Pricing />
         <VendorSection />
       </main>
       <Footer />

@@ -12,82 +12,46 @@ const CheckIcon = () => (
 
 export default function ValueProp() {
   return (
-    <section className="relative overflow-hidden">
+    <section id="our-story" className="relative overflow-hidden min-h-[480px] lg:min-h-[580px] flex items-center">
       {/* Background: family praying image with overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden bg-[#1E3A2F]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/family_puja_1782817017087.png"
           alt="Family morning puja ritual"
-          className="w-full h-full object-cover"
+          className="absolute right-0 top-0 w-full lg:w-[68%] h-full object-cover object-[center_50%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A2F]/90 via-[#2C1A10]/75 to-transparent mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        {/* Solid gradient mask to seamlessly blend the left edge of the image into the dark green background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A2F] via-[#1E3A2F] via-[36%] to-transparent opacity-100" />
+        {/* Atmospheric shadow overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* Left: Quote text */}
-          <div>
-            <p className="font-serif text-[2.2rem] lg:text-[2.6rem] text-cream font-medium leading-[1.25] mb-6">
+          {/* Left Column: Pure brand quote with editorial line-height */}
+          <div className="max-w-xl">
+            {/* Elegant ornament */}
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-8 h-[1px] bg-gold-light/60" />
+              <span className="text-[10px] uppercase tracking-[0.2em] text-gold-light font-semibold">The Ritual</span>
+              <div className="w-8 h-[1px] bg-gold-light/60" />
+            </div>
+
+            <h2 className="font-serif text-[2.4rem] lg:text-[3.2rem] text-cream font-medium leading-[1.15] mb-6 tracking-[-0.01em]">
               For generations,<br />
               flowers have marked<br />
               the beginning of a<br />
               peaceful day.
-            </p>
-            <p className="font-serif text-xl text-cream/80 italic font-medium">
+            </h2>
+            <p className="font-serif text-xl lg:text-2xl text-gold-light/90 italic font-medium leading-relaxed">
               We simply make sure<br />they are always there.
             </p>
           </div>
 
-          {/* Right: Pricing Card — Glassmorphism */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[360px] rounded-[28px] overflow-hidden">
-              {/* Glass background */}
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[28px]" />
-              {/* Top gold shine */}
-              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
-              {/* Subtle inner glow */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white/8 to-transparent rounded-[28px]" />
-
-              <div className="relative p-8">
-                <h3 className="font-serif text-[1.4rem] font-semibold text-cream text-center mb-2 pb-4 border-b border-white/20">
-                  Daily Puja Plan
-                </h3>
-
-                <ul className="space-y-3.5 mb-7 mt-5">
-                  {[
-                    "Daily fresh seasonal flowers",
-                    "Delivered before 7 AM",
-                    "Pause / Resume anytime",
-                    "Dedicated WhatsApp support",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-[14px] text-cream/90 font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Price block */}
-                <div className="text-center py-4 mb-6 bg-white/10 rounded-2xl border border-white/15">
-                  <div className="font-serif text-[2.2rem] font-bold text-cream leading-none">
-                    ₹449{" "}
-                    <span className="text-[1rem] font-semibold text-cream/70">/ month</span>
-                  </div>
-                  <div className="text-[12px] text-gold/80 mt-1.5 font-medium">≈ ₹15 per day · Cancel anytime</div>
-                </div>
-
-                <button className="btn-gold w-full justify-center gap-2.5 text-[14px]">
-                  <WaIcon className="w-5 h-5" />
-                  Start On WhatsApp
-                </button>
-              </div>
-            </div>
-          </div>
+          {/* Right Column: Left empty so the mother and daughter praying remain fully visible */}
+          <div className="hidden lg:block h-10" />
 
         </div>
       </div>

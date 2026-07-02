@@ -98,19 +98,67 @@ export default function Hero() {
             <svg className="absolute bottom-24 right-10 w-4 h-4 text-gold opacity-50 rotate-[-15deg] z-10 animate-float-slow" style={{animationDelay:'0.5s'}} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/></svg>
             <svg className="absolute top-4 right-16 w-3 h-3 text-gold-mid opacity-60 z-10 animate-float" style={{animationDelay:'1.5s'}} fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/></svg>
 
-            {/* Main image — leaf/petal shape crop */}
-            <div
-              className="relative w-[480px] h-[400px] overflow-hidden shadow-2xl border-8 border-white"
-              style={{ borderRadius: "50% 20px 50% 20px" }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/puja-hero.png"
-                alt="Vibrant puja flower arrangement with marigolds, roses and lit diyas"
-                className="w-full h-full object-cover"
-              />
-              {/* Warm overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-900/10 via-transparent to-orange-900/15 mix-blend-multiply" />
+            {/* Main image wrapper for group hover effects and decorative corner gold leaves */}
+            <div className="relative group">
+              {/* Top-Right Golden Leaf Sprig */}
+              <div className="absolute -top-14 -right-14 w-36 h-36 pointer-events-none z-10 animate-float-slow transition-all duration-700 ease-out group-hover:scale-110 group-hover:translate-x-3 group-hover:-translate-y-3 opacity-90 group-hover:opacity-100">
+                <svg className="w-full h-full" viewBox="0 0 120 120" fill="none">
+                  <defs>
+                    <linearGradient id="gold-leaf-tr" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#B8874A" />
+                      <stop offset="50%" stopColor="#D4A76A" />
+                      <stop offset="100%" stopColor="#F5ECD8" />
+                    </linearGradient>
+                    <filter id="gold-glow">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#B8874A" floodOpacity="0.3"/>
+                    </filter>
+                  </defs>
+                  {/* Delicate main stem */}
+                  <path d="M20,100 C35,80 65,45 100,20" stroke="url(#gold-leaf-tr)" strokeWidth="2" strokeLinecap="round" filter="url(#gold-glow)" />
+                  {/* Organic detailed leaves branching off */}
+                  <path d="M45,75 C35,78 30,68 38,58 C45,52 50,60 45,75 Z" fill="url(#gold-leaf-tr)" filter="url(#gold-glow)" />
+                  <path d="M55,60 C65,65 72,55 62,45 C55,40 50,50 55,60 Z" fill="url(#gold-leaf-tr)" filter="url(#gold-glow)" />
+                  <path d="M72,45 C62,48 58,38 66,28 C72,22 78,32 72,45 Z" fill="url(#gold-leaf-tr)" filter="url(#gold-glow)" />
+                  <path d="M82,35 C92,40 98,30 88,20 C82,15 78,25 82,35 Z" fill="url(#gold-leaf-tr)" filter="url(#gold-glow)" />
+                  <path d="M98,22 C102,12 112,16 108,26 C104,32 94,28 98,22 Z" fill="url(#gold-leaf-tr)" filter="url(#gold-glow)" />
+                </svg>
+              </div>
+
+              {/* Bottom-Left Golden Leaf Sprig */}
+              <div className="absolute -bottom-14 -left-14 w-36 h-36 pointer-events-none z-10 animate-float transition-all duration-700 ease-out group-hover:scale-110 group-hover:-translate-x-3 group-hover:translate-y-3 opacity-90 group-hover:opacity-100 rotate-180">
+                <svg className="w-full h-full" viewBox="0 0 120 120" fill="none">
+                  <defs>
+                    <linearGradient id="gold-leaf-bl" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#B8874A" />
+                      <stop offset="50%" stopColor="#D4A76A" />
+                      <stop offset="100%" stopColor="#F5ECD8" />
+                    </linearGradient>
+                  </defs>
+                  {/* Delicate main stem */}
+                  <path d="M20,100 C35,80 65,45 100,20" stroke="url(#gold-leaf-bl)" strokeWidth="2" strokeLinecap="round" filter="url(#gold-glow)" />
+                  {/* Organic detailed leaves branching off */}
+                  <path d="M45,75 C35,78 30,68 38,58 C45,52 50,60 45,75 Z" fill="url(#gold-leaf-bl)" filter="url(#gold-glow)" />
+                  <path d="M55,60 C65,65 72,55 62,45 C55,40 50,50 55,60 Z" fill="url(#gold-leaf-bl)" filter="url(#gold-glow)" />
+                  <path d="M72,45 C62,48 58,38 66,28 C72,22 78,32 72,45 Z" fill="url(#gold-leaf-bl)" filter="url(#gold-glow)" />
+                  <path d="M82,35 C92,40 98,30 88,20 C82,15 78,25 82,35 Z" fill="url(#gold-leaf-bl)" filter="url(#gold-glow)" />
+                  <path d="M98,22 C102,12 112,16 108,26 C104,32 94,28 98,22 Z" fill="url(#gold-leaf-bl)" filter="url(#gold-glow)" />
+                </svg>
+              </div>
+
+              {/* Main image — leaf/petal shape crop */}
+              <div
+                className="relative w-[480px] h-[400px] overflow-hidden shadow-2xl border-8 border-white z-0 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                style={{ borderRadius: "50% 20px 50% 20px" }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/puja-hero.png"
+                  alt="Vibrant puja flower arrangement with marigolds, roses and lit diyas"
+                  className="w-full h-full object-cover"
+                />
+                {/* Warm overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-900/10 via-transparent to-orange-900/15 mix-blend-multiply" />
+              </div>
             </div>
           </div>
         </div>

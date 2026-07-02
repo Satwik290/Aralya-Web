@@ -47,7 +47,7 @@ export default function VendorSection() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/vendor_1782817026999.png"
+                src="/vendor_delivery.png"
                 alt="Trusted newspaper vendor at dawn"
                 className="w-full h-full object-cover"
               />
